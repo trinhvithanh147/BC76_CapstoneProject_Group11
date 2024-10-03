@@ -1,1 +1,13 @@
-/*# sourceMappingURL=style.css.map */
+header .header_top {
+  padding: 6px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header .header_top .header_content_top_icon a {
+  color: #999;
+  font-size: 17px;
+  display: inline-block;
+  line-height: 1;
+  margin-left: 20px;
+}/*# sourceMappingURL=style.css.map */
