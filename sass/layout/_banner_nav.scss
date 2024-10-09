@@ -1,0 +1,26 @@
+.background_nav {
+  background-image: url(./../image/shop.jpg);
+  background-size: cover;
+}
+.nav_item {
+  padding: 60px 0;
+  text-align: center;
+  h2 {
+    padding-bottom: 10px;
+    @include styleText(24px, $color-300, bold);
+  }
+  .nav_link {
+    a {
+      text-decoration: none;
+      margin: 0 10px;
+      @include styleText(16px, $color-300, 400);
+      transition: all 0.3s;
+      &:hover {
+        color: $color-100;
+      }
+    }
+    p {
+      color: $color-300;
+    }
+  }
+}

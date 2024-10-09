@@ -1,1 +1,119 @@
-/*# sourceMappingURL=register.css.map */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  vertical-align: middle;
+}
+
+body {
+  font-family: "Nunito Sans", sans-serif;
+  color: #555555;
+  line-height: 1.7;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+@media (min-width: 576px) {
+  .container,
+  .container-sm {
+    max-width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  .container,
+  .container-md,
+  .container-sm {
+    max-width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm {
+    max-width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl {
+    max-width: 1140px;
+  }
+}
+@media (min-width: 1400px) {
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl,
+  .container-xxl {
+    max-width: 1320px;
+  }
+}
+.background_nav {
+  background-image: url(./../image/shop.jpg);
+  background-size: cover;
+}
+
+.nav_item {
+  padding: 60px 0;
+  text-align: center;
+}
+.nav_item h2 {
+  padding-bottom: 10px;
+  font-size: 24px;
+  color: #fff;
+  font-weight: bold;
+}
+.nav_item .nav_link a {
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 16px;
+  color: #fff;
+  font-weight: 400;
+  transition: all 0.3s;
+}
+.nav_item .nav_link a:hover {
+  color: #87b106;
+}
+.nav_item .nav_link p {
+  color: #fff;
+}
+
+.register .register_form {
+  margin: 0 auto;
+  width: 50%;
+  padding: 50px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.register .register_form .register_content h4 {
+  font-size: 20;
+  color: #222222;
+  font-weight: bold;
+}
+.register .register_form .register_content form input {
+  padding: 12px 10px;
+  background: #f7f7f7;
+  border: 1px solid #ccc;
+  font-size: 14;
+  color: #555555;
+  font-weight: 400;
+}
+.register .register_form .register_content .cart_button {
+  margin: 20px 0;
+  padding: 5px 25px;
+  background-color: #87b106;
+  font-size: 18px;
+  color: #fff;
+  font-weight: bold;
+  transition: all 0.5s;
+}
+.register .register_form .register_content .cart_button:hover {
+  background-color: #000;
+}/*# sourceMappingURL=register.css.map */
