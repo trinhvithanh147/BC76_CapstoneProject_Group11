@@ -1,0 +1,139 @@
+@import './base/reset';
+@import './base/base';
+@import './helper/variable';
+@import './helper/mixin';
+
+main {
+  .background_nav {
+    background-image: url(./../image/shop.jpg);
+    background-size: cover;
+  }
+  .nav_item {
+    padding: 60px 0;
+    text-align: center;
+    h2 {
+      padding-bottom: 10px;
+      @include styleText(24px, $color-300, bold);
+    }
+    .nav_link {
+      a {
+        text-decoration: none;
+        margin: 0 10px;
+        @include styleText(16px, $color-300, 400);
+        transition: all 0.3s;
+        &:hover {
+          color: $color-100;
+        }
+      }
+      p {
+        color: $color-300;
+      }
+    }
+  }
+  .item_content {
+    padding-top: 100px;
+    .item_img {
+      .img_content_leader {
+        img {
+          width: 100%;
+        }
+      }
+    }
+    .item_text {
+      width: 80%;
+      h3 {
+        text-transform: uppercase;
+        @include styleText(24px, $color-200, bold);
+      }
+      p {
+        .pro_review {
+          padding-left: 10px;
+          font-size: 14px;
+        }
+      }
+      .price_new {
+        @include styleText(24px, $color-500, bold);
+      }
+      h5 {
+        @include styleText(18px, $color-200, 400);
+      }
+      .item_countdown {
+        text-transform: uppercase;
+        background-color: $color-1000;
+        width: 60px;
+        padding: 5px 0;
+        border-radius: 10px;
+        margin: 20px 0 30px;
+        margin-right: 10px;
+        span {
+          @include styleText(16px, $color-200, 400);
+          &:last-child {
+            display: block;
+            @include styleText(11px, $color-200, 400);
+          }
+        }
+      }
+      .availability {
+        margin-bottom: 15px;
+        i {
+          @include styleText(13px, $color-100, 400);
+        }
+        span {
+          text-transform: uppercase;
+          @include styleText(13px, $color-400, 400);
+        }
+      }
+      .pro-desc {
+        margin-bottom: 20px;
+      }
+      .cart_button {
+        margin-bottom: 20px;
+        padding: 5px 25px;
+        border-radius: 50px;
+        background-color: $color-100;
+        @include styleText(18px, $color-300, bold);
+        transition: all 0.5s;
+        &:hover {
+          background-color: $color-900;
+        }
+      }
+      .useful-links {
+        margin-bottom: 20px;
+        a {
+          text-decoration: none;
+          text-transform: capitalize;
+          margin-right: 20px;
+          @include styleText(14px, $color-200, 500);
+          transition: all 0.5s;
+          &:hover {
+            @include styleText(14px, $color-100, 500);
+          }
+        }
+      }
+      .like-icon {
+        padding-top: 20px;
+        border-top: 1px solid #f2f2f2;
+        a {
+          margin-right: 6px;
+          padding: 3px 8px;
+          text-transform: capitalize;
+          text-decoration: none;
+          border-radius: 5px;
+          @include styleText(12px, $color-300, 400);
+        }
+        .facebook {
+          background-color: #3b5999;
+        }
+        .twitter {
+          background-color: #1da1f2;
+        }
+        .pinterest {
+          background-color: #cb2028;
+        }
+        .google {
+          background-color: #fe6d4c;
+        }
+      }
+    }
+  }
+}
