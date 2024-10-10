@@ -567,7 +567,7 @@ footer .footer-bottom-area p a {
 
 .register .register_form {
   margin: 0 auto;
-  width: 50%;
+  width: 90%;
   padding: 50px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
@@ -576,7 +576,7 @@ footer .footer-bottom-area p a {
   color: #222222;
   font-weight: bold;
 }
-.register .register_form .register_content form input {
+.register .register_form .register_content form .input_content input {
   padding: 12px 10px;
   background: #f7f7f7;
   border: 1px solid #ccc;
