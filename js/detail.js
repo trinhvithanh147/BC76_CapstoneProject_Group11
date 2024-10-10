@@ -67,7 +67,7 @@ window.onload = function () {
         document.querySelector(".product-carousel").innerHTML = listProductCarousel;
         $(".product-carousel").owlCarousel({
             loop: true,
-            dots: false,
+            dots: true,
             margin: 10,
             autoplay: true,
             autoplayHoverPause: true,
@@ -80,7 +80,7 @@ window.onload = function () {
                     items: 3,
                 },
                 1000: {
-                    items: 5,
+                    items: 3,
                 },
             },
         });
@@ -96,8 +96,8 @@ window.onload = function () {
                 // Hiển thị dữ liệu
                 // console.log(data);
             })
-            .catch(function (error) {
-                // console.error('Error:', error);
+            .catch(function (err) {
+                console.log(err)
             });
     }
     getData(productId);
@@ -111,6 +111,9 @@ window.onload = function () {
                 let data = res.data;
                 renderListProduct(data);
             })
+            .catch(function (err) {
+                console.log(err)
+            });
 
     }
 

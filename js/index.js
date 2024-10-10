@@ -74,7 +74,7 @@ window.onload = function () {
                                             <div class="price_box">
                                                 <span class="price_new">${data.content[i].price}</span>
                                             </div>
-                                            <a href="./detail/detail.html?productid=${i.id}">
+                                            <a href="./detail/detail.html?productid=${data.content[i].id}">
                                                 <div class="add_to_cart">
                                                     <i class="fa fa-shopping-cart"></i>
                                                 </div>
@@ -118,7 +118,7 @@ window.onload = function () {
                                             <div class="price_box">
                                                 <span class="price_new">${data.content[i].price}</span>
                                             </div>
-                                            <a href="./detail/detail.html?productid=${i.id}">
+                                            <a href="./detail/detail.html?productid=${data.content[i].id}">
                                                 <div class="add_to_cart">
                                                     <i class="fa fa-shopping-cart"></i>
                                                 </div>
@@ -187,7 +187,7 @@ window.onload = function () {
         document.querySelector(".product-carousel").innerHTML=listProductCarousel;
         $(".product-carousel").owlCarousel({
             loop: true,
-            dots: false,
+            dots: true,
             margin: 10,
             autoplay: true,
             autoplayHoverPause: true,
@@ -197,10 +197,10 @@ window.onload = function () {
                     items: 1,
                 },
                 600: {
-                    items: 3,
+                    items: 2,
                 },
                 1000: {
-                    items: 5,
+                    items: 3,
                 },
             },
         });
