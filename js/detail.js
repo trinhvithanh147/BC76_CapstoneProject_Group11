@@ -85,20 +85,33 @@ window.onload = function () {
             },
         });
     }
-    function shoesShize(data){
-        let listShoesSize ="";
+    function shoesShize(data) {
+        let listShoesSize = "";
         console.log(data)
-        for(let i of data.content.size){
+        for (let i of data.content.size) {
             console.log(i)
             listShoesSize +=
-            `
-            <div class="item_countdown text-center">
+                `
+            <button  class="sizeBtn btn item_countdown item_countdown text-center">
             <span>Size</span>
             <span style="font-size:16px">${i}</span>
-            </div>
+            </button>
             `
         }
-        document.querySelector(".product_countdown").innerHTML=listShoesSize
+        document.querySelector(".product_countdown").innerHTML = listShoesSize;
+        let sizeButtons = document.querySelectorAll(".sizeBtn");
+        for (let button of sizeButtons) {
+            button.onclick = function() {
+                for (let btn of sizeButtons) {
+                    btn.style.border = '1px solid transparent';
+                }
+                if (this.style.border == '2px solid #000') {
+                    this.style.border = '1px solid transparent';
+                } else {
+                    this.style.border = '2px solid #000';
+                }
+            };
+        }
     }
     function getData() {
         let promise = axios({
@@ -106,7 +119,7 @@ window.onload = function () {
             method: "GET",
         })
         promise
-            .then((res)=>{
+            .then((res) => {
                 console.log(res);
                 render(res.data);
                 shoesShize(res.data);
