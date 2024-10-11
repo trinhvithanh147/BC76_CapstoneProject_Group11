@@ -4,6 +4,15 @@ header {
     padding: 6px 0;
 
     .header_top_left {
+      @media  screen and (min-width: 468px) {
+        text-align: start;
+      }
+      @media  screen and (min-width: 768px) {
+        text-align: center;
+      }
+      @media  screen and (min-width: 1024px) {
+        text-align: left;
+      }
       a:first-of-type {
         margin-left: 0;
       }
@@ -24,7 +33,6 @@ header {
 
     .header_top_right {
       padding: 0;
-
       .navbar-nav {
         .nav-item:first-of-type {
           .nav-link {
@@ -61,6 +69,9 @@ header {
         }
 
         .nav-item {
+          @media  screen and (min-width: 46.25em) and (max-width: 63.9375em) {
+              padding-top: 15px;
+          }
           .nav-link {
             font-size: 14px;
             color: $color-800;
@@ -70,6 +81,9 @@ header {
             &:hover {
               color: $color-100;
             }
+            @media  screen and (min-width: 768px) {
+              font-size: 16px;
+          }
           }
         }
       }
@@ -80,11 +94,9 @@ header {
     padding: 20px 0;
     background-color: $bg-color-200;
     color: white;
-
     ul {
       .header_call {
         line-height: 1;
-
         .call_icon {
           padding-right: 15px;
 
@@ -112,7 +124,9 @@ header {
 
       .search-wrapper {
         width: 48%;
-
+        @media  screen and (min-width: 776.96px) {
+          width: 48%;
+        }
         input {
           height: 50px;
           font-size: 16px;
@@ -163,3 +177,4 @@ header {
     }
   }
 }
+

@@ -4,17 +4,18 @@
 @import './helper/mixin';
 @import './layout/product';
 @import './layout/banner_nav';
-@import './layout/header';
 @import './layout/footer';
 @import './layout/product';
 @import './components/backtotop';
+@import './layout/header';
+@import './components/responsive';
 main {
   .item_content {
     padding-top: 100px;
     .item_img {
       .img_content_leader {
         img {
-          width: 100%;
+          max-width: 100%;
         }
       }
     }

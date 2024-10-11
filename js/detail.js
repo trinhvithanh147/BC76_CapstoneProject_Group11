@@ -23,8 +23,8 @@ window.onload = function () {
     function renderListProduct(data) {
         let listProductCarousel = "";
         for (let i of data.content) {
-                listProductCarousel +=
-                    `
+            listProductCarousel +=
+                `
             <div class="product_item">
                                     <div class="product_thumb">
                                         <img src="${i.image}" alt="" width="100%" />
@@ -67,7 +67,7 @@ window.onload = function () {
         document.querySelector(".product-carousel").innerHTML = listProductCarousel;
         $(".product-carousel").owlCarousel({
             loop: true,
-            dots: true,
+            dots: false,
             margin: 10,
             autoplay: true,
             autoplayHoverPause: true,
@@ -85,22 +85,21 @@ window.onload = function () {
             },
         });
     }
-    // Kiểm tra nếu productid tồn tại
-    function getData(data) {
-        // Gọi API và xử lý kết quả với then/catch
-        axios.get(`https://shop.cyberlearn.vn/api/Product/getbyid?id=${data}`)
-            .then(function (response) {
-                // Gán dữ liệu vào biến
-                const data = response.data;
-                render(data);
-                // Hiển thị dữ liệu
-                // console.log(data);
+    function getData() {
+        let promise = axios({
+            url: `https://shop.cyberlearn.vn/api/Product/getbyid?id=${productId}`,
+            method: "GET",
+        })
+        promise
+            .then((res)=>{
+                console.log(res);
+                render(res.data);
             })
             .catch(function (err) {
                 console.log(err)
             });
     }
-    getData(productId);
+    getData();
     function getListDataProDuct() {
         let promise = axios({
             url: "https://shop.cyberlearn.vn/api/Product",
@@ -108,8 +107,8 @@ window.onload = function () {
         })
         promise
             .then((res) => {
-                let data = res.data;
-                renderListProduct(data);
+                console.log(res.data);
+                renderListProduct(res.data);
             })
             .catch(function (err) {
                 console.log(err)
