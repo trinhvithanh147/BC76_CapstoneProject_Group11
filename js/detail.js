@@ -85,6 +85,21 @@ window.onload = function () {
             },
         });
     }
+    function shoesShize(data){
+        let listShoesSize ="";
+        console.log(data)
+        for(let i of data.content.size){
+            console.log(i)
+            listShoesSize +=
+            `
+            <div class="item_countdown text-center">
+            <span>Size</span>
+            <span style="font-size:16px">${i}</span>
+            </div>
+            `
+        }
+        document.querySelector(".product_countdown").innerHTML=listShoesSize
+    }
     function getData() {
         let promise = axios({
             url: `https://shop.cyberlearn.vn/api/Product/getbyid?id=${productId}`,
@@ -94,6 +109,7 @@ window.onload = function () {
             .then((res)=>{
                 console.log(res);
                 render(res.data);
+                shoesShize(res.data);
             })
             .catch(function (err) {
                 console.log(err)
