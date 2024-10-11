@@ -8,7 +8,6 @@ window.onload = function () {
         let giaSanPham = data.content.price;
         let mieuTaNganSanPham = data.content.shortDescription;
         let soLuongSanPha = data.content.quantity;
-        console.log(tenSanPham)
         let productName = document.getElementById("productName");
         let productImg = document.getElementById("img_1");
         let productPirce = document.querySelector(".price_new");

@@ -50,7 +50,7 @@ window.onload = function () {
             `
         }
         for (let i = 0; i <= 9; i++) {
-            if (i == 5 || i == 4 || i == 3 || i == 6 || i == 1 || i == 9) {
+            if (i == 5 || i == 4 || i == 3 || i == 6 || i == 1 || i == 9||i == 2 || i== 7) {
                 listProductMen +=
                     `
             <div class="product_item">
@@ -94,7 +94,7 @@ window.onload = function () {
 
         }
         for (let i = 10; i <= 18; i++) {
-            if (i == 11 || i == 12 || i == 13 || i == 14 || i == 15 || i == 16) {
+            if (i == 11 || i == 12 || i == 13 || i == 14 || i == 15 || i == 16||i==17||i==18) {
                 listProductWoman +=
                     `
             <div class="product_item">
@@ -138,7 +138,7 @@ window.onload = function () {
 
         }
         for (let i = 10; i <= 18; i++) {
-            if (i == 11 || i == 12 || i == 13 || i == 14 || i == 15 || i == 16) {
+            if (i == 11 || i == 12 || i == 13 || i == 14 || i == 15 || i == 16||i == 17) {
                 listProductCarousel +=
                     `
             <div class="product_item">
