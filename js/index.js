@@ -94,7 +94,7 @@ window.onload = function () {
 
         }
         for (let i = 10; i <= 18; i++) {
-            if (i == 11 || i == 12 || i == 13 || i == 14 || i == 15 || i == 16||i==17||i==18) {
+            if (i == 11 || i == 12 || i == 13 || i == 14 || i == 15 || i == 16||i==17||i==10) {
                 listProductWoman +=
                     `
             <div class="product_item">
@@ -138,7 +138,7 @@ window.onload = function () {
 
         }
         for (let i = 10; i <= 18; i++) {
-            if (i == 11 || i == 12 || i == 13 || i == 14 || i == 15 || i == 16||i == 17) {
+            if (i == 11 || i == 12 || i == 13 || i == 14 || i == 15 || i == 16) {
                 listProductCarousel +=
                     `
             <div class="product_item">
