@@ -201,7 +201,17 @@ only screen and (max-width: 767.98px) {
             padding-left: 0;
         }
     }
+    #list_product {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
 
+    #productMen {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+
+    #productWoman {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
     .newsletter_area {
         form {
             display: block !important;
